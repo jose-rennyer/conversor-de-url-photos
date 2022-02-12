@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de url de fotos</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family:arial;
+        }
+        body{
+            background-color:#0b0126;
+        }
+        .mid{
+            background-color:#0b0126;
+            max-width:800px;
+            margin:auto;
+            text-align:center;
+            height:100vh;
+        }
+        .mid h1{
+            color:cyan;
+            text-shadow:1px 1px 3px #fff;
+        }
+        .mid .image-area{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            margin-top:10px;
+        }
+        .image-area #campo{
+            width:400px;
+            font-size:18px;
+            padding:10px 4px;
+            outline:0;
+            border:2px solid cyan;
+            border-radius:10px;
+            background-color:#0b0126;
+            color:cyan;
+            text-shadow:1px 1px 3px #fff;
+            box-shadow:1px 3px 9px cyan;
+        }
+        .image-area #campo::placeholder{
+            color:cyan;
+        }
+        .image-area #imagem{
+            width:90%;
+            height:400px;
+        }
+        .image-area .bt,.bt-dog{
+            width:125px;
+            font-size:18px;
+            padding:10px 0px;
+            margin-top:15px;
+            background-color:#0b0126;
+            color:cyan;
+            text-shadow:1px 1px 3px #fff;
+            border:2px solid cyan;
+            border-radius:10px;
+            cursor:pointer;
+        }
+        .bt-dog{
+            margin-bottom:15px;
+            width:250px;
+        }
+        .bt:hover, .bt-dog:hover{
+            background-color:cyan;
+            color:#0b0126
+        }
+        @media (min-height:1000px){
+            .image-area #imagem{
+                height:auto;
+            }
+        }
+        @media (max-width:460px){
+            .image-area #campo{
+                width:250px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mid">
+        <h1>Conversor de imagens</h1>
+
+        <div class="image-area">
+            <input id="campo" type="text" placeholder="Url da imagem aqui"/>
+            <div>
+                <button class="bt" onclick="converter()">Converter</button>
+                <button class="bt" onclick="limpar()">limpar</button>
+            </div>
+            
+            <button class="bt-dog" onclick="randomdogimage()">Imagem aleatoria de cachorro</button>
+            
+            
+            <img id="imagem" src="img/aguardando.jpg"/>
+        </div>
+    </div>
+    
+    <script src="javascript/js.js"></script>
+</body>
+</html>
